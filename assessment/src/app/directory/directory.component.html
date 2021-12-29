@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="d-flex justify-content-center img-wrap">
+    <img [src]="directoryData.image" class="rounded" alt="..." />
+  </div>
+  <div class="card-body text-center">
+    <h6 class="card-title">{{ directoryData.name }}</h6>
+    <a
+      href="#"
+      class="card-link"
+      *ngFor="let product of directoryData.products"
+      >{{ product.title }}</a
+    >
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.directory-container {
+  display: flex;
+  column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  .directory-wrap {
+    width: 25%;
+    flex-shrink: 0;
+  }
+}

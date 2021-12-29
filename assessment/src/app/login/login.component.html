@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+  <h4>Template Driven Form</h4>
+  <div class="col-4">
+    <form #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email"> Email </label>
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          id="email"
+          [(ngModel)]="loginModule.email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password"> Password </label>
+        <input
+          class="form-control"
+          type="password"
+          name="password"
+          id="password"
+          [(ngModel)]="loginModule.password"
+          required
+        />
+      </div>
+      <div class="form-group mt-3">
+        <button
+          class="btn btn-primary"
+          [disabled]="!loginForm.valid"
+          (click)="login()"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+
+    <div class="mt-5">
+      <h6>just for reference</h6>
+      {{ loginForm.value | json }}
+    </div>
+  </div>
+</div>
